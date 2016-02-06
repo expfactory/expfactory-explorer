@@ -1,24 +1,7 @@
-shiny-explorer
+expfactory-explorer
 ==============
 
-Shiny (www.rstudio.com/shiny) based data explorer with report templates based on field selection.
-
-![Screenshot](screenshots.jpg)
-
-## Instructions
-
-From github:
-
-```
-library(shiny)
-runGitHub("shiny-explorer","dkilfoyle")
-```
-
-From downloaded source:
-
-```
-shiny:::runApp("../shiny-explorer")
-```
+Shiny (www.rstudio.com/shiny) based data explorer with report templates based on field selection, customized for the experiment factory.
 
 ## Template Processing
 
