@@ -32,11 +32,12 @@ shinyUI(navbarPage("Shiny-Explorer", position="fixed-top",
         # header includes
         includeCSS("www/css/dkknitr.css"),
         includeCSS("www/css/hover.css"),
-        
+ 
         includeScript("www/js/jquery-ui-1.10.3.custom.min.js"),
         includeScript("www/js/jquery.sparkline.min.js"),
         includeScript("www/js/highlight.pack.js"),
         includeScript("www/js/toc.js"),
+        includeScript("www/js/style.js"),
         
         jsCodeHandler(), # for sending custom JS code to execute
         tags$style(type="text/css", "body {padding-top: 70px;}"), # stop fixed-top navbar from overlay body content
@@ -115,45 +116,45 @@ shinyUI(navbarPage("Shiny-Explorer", position="fixed-top",
       ) # mainPanel
       
     ) # sidebarLayout
-  ), # tabPanel(Explorer)
+  ) # tabPanel(Explorer)
   
-  navbarMenu("Import", icon=icon("list"),
-    tabPanel("Excel", icon=icon("list"),
-      sidebarLayout(
-        sidebarPanel(   
-          h3("Data Import"),
-          wellPanel(
-            h4("Excel .xls/.xlsx:"),
-            tags$hr(),
-            fileInput('importFile', label=NULL, accept=c('.xls','.xlsx')),
-            selectInput("excelsheets", "Sheet:", choices = c()),
-            textInput("xlsdataframe", "DataFrame Name:", "myxlsdf"),
-            actionButton("assignxls", "Assign to DF")
-          )
-        ),
-        mainPanel()
-      )
-    ),
-    tabPanel("CSV", icon=icon("list"),
-      sidebarLayout(
-       sidebarPanel(   
-         h3("Data Import"),
-         wellPanel(
-           h4("CSV:"),
-           tags$hr(),
-           fileInput('importFile', label=NULL, accept=c('.xls','.xlsx')),
-           textInput("csvdataframe", "DataFrame Name:", "mycsvdf"),
-           actionButton("assigncsv", "Assign to DF")
-         )
-       ),
-       mainPanel()
-      )
-    )
-  ), # navbarMenu(Import)
+  #navbarMenu("Import", icon=icon("list"),
+  #  tabPanel("Excel", icon=icon("list"),
+  #    sidebarLayout(
+  #      sidebarPanel(   
+  #        h3("Data Import"),
+  #        wellPanel(
+  #          h4("Excel .xls/.xlsx:"),
+  #          tags$hr(),
+  #          fileInput('importFile', label=NULL, accept=c('.xls','.xlsx')),
+  #          selectInput("excelsheets", "Sheet:", choices = c()),
+  #          textInput("xlsdataframe", "DataFrame Name:", "myxlsdf"),
+  #          actionButton("assignxls", "Assign to DF")
+  #        )
+  #      ),
+  #      mainPanel()
+  #    )
+  #  ),
+  #  tabPanel("CSV", icon=icon("list"),
+  #    sidebarLayout(
+  #     sidebarPanel(   
+  #       h3("Data Import"),
+  #       wellPanel(
+  #         h4("CSV:"),
+  #         tags$hr(),
+  #         fileInput('importFile', label=NULL, accept=c('.xls','.xlsx')),
+  #         textInput("csvdataframe", "DataFrame Name:", "mycsvdf"),
+  #         actionButton("assigncsv", "Assign to DF")
+  #       )
+  #     ),
+  #     mainPanel()
+  #    )
+  #  )
+  #), # navbarMenu(Import)
   
-  navbarMenu("Tests", icon=icon("bar-chart"),
-    tabPanel("2 Sample"),
-    tabPanel("Correlation")
-  ) # navbarMenu(Tests)
+  #navbarMenu("Tests", icon=icon("bar-chart"),
+  #  tabPanel("2 Sample"),
+  #  tabPanel("Correlation")
+  #) # navbarMenu(Tests)
   
 ))
