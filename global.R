@@ -4,3 +4,8 @@ require(rpivotTable) #install_github(c("ramnathv/htmlwidgets", "smartinsightsfro
 local_global = as.data.frame(read.csv("data/local_global_data.tsv",sep="\t"))
 sensation_seeking = as.data.frame(read.csv("data/sensation_seeking_data.tsv",sep="\t"))
 grit_scale = as.data.frame(read.csv("data/grit_scale_data.tsv",sep="\t"))
+brief_self_control = as.data.frame(read.csv("data/brief_self_control_data.tsv",sep="\t"))
+choice_reaction_time = as.data.frame(read.csv("data/choice_reaction_time_data.tsv",sep="\t"))
+columbia_card_task_cold = as.data.frame(read.csv("data/columbia_card_task_cold_data.tsv",sep="\t"))
+columbia_card_task_hot = as.data.frame(read.csv("data/columbia_card_task_hot_data.tsv",sep="\t"))
+digit_span = as.data.frame(read.csv("data/digit_span_data.tsv",sep="\t"))

@@ -47,7 +47,7 @@ shinyUI(navbarPage("Expfactory-Explorer", position="fixed-top",
         wellPanel(
           selectInput("dataset", "Dataframe:", choices = getDataFrames()),
           p(helpText("Choose the desired fields in the dropdowns",
-            "and click Analyse to show an analysis."))
+            "and click Analyze to show an analysis."))
         ),
         
         accordion("fieldsAccordion", 
@@ -74,7 +74,7 @@ shinyUI(navbarPage("Expfactory-Explorer", position="fixed-top",
         
         p(
           # use actionButton rather than submitButton so that changing the dataframe dropdown automatically updates the field selects
-          actionButton("go",strong("Analyse"), class="hvr-icon-spin"), #icon("play")), 
+          actionButton("go",strong("Analyze"), class="hvr-icon-spin"), #icon("play")), 
           actionButton("deleteSelections", "Clear Selections", class="hvr-icon-sink-away") #icon("trash-o"))
         )
         
