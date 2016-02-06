@@ -1,5 +1,6 @@
 library(shiny)
 library(shinyAce)
 require(rpivotTable) #install_github(c("ramnathv/htmlwidgets", "smartinsightsfromdata/rpivotTable"))
-data(iris)
-data(airquality)
+local_global = as.data.frame(read.csv("data/local_global_data.tsv",sep="\t"))
+sensation_seeking = as.data.frame(read.csv("data/sensation_seeking_data.tsv",sep="\t"))
+grit_scale = as.data.frame(read.csv("data/grit_scale_data.tsv",sep="\t"))

@@ -19,10 +19,10 @@ selectizeRenderStr = "
   }"
 
 # for testing logistic regression
-#mydata <- read.csv("http://www.ats.ucla.edu/stat/data/binary.csv")
+mydata <- as.data.frame(read.csv("http://www.ats.ucla.edu/stat/data/binary.csv"))
 
 # Define UI for dataset viewer application
-shinyUI(navbarPage("Shiny-Explorer", position="fixed-top",
+shinyUI(navbarPage("Expfactory-Explorer", position="fixed-top",
   
   tabPanel("Explorer", icon=icon("list"),
     
